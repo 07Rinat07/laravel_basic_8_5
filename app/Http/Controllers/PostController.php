@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
-use App\Models\PostTag;
 use App\Models\Tag;
 
 class PostController extends Controller
@@ -13,7 +12,10 @@ class PostController extends Controller
     {
 
 
-        $posts = Post::all ();
+        $post = Post::find (1);
+        $category = Category::find (1);
+        $tag = Tag::find (1);
+        dd ($post->tags);
         return view ('post.index', compact ('posts'));
 
     }
@@ -38,7 +40,7 @@ class PostController extends Controller
         unset($data['tags']);
         $post = Post::create ($data);
 
-        $post->tags()->attach($tags);
+        $post->tags ()->attach ($tags);
         return redirect ()->route ('post.index');
     }
 
