@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return'aaaaaaaaaaaaaaaaaaa';
-});
+Route::get('/', 'HomeController@index');
 
 
 Route::group (['namespace' => 'Post'], function () {
@@ -43,3 +41,7 @@ Route::get('/posts/update_or_create', 'PostController@updateOrCreate');
 Route::get('/main', 'MainController@index')->name ('main.index');
 Route::get('/contacts', 'ContactController@index')->name ('contact.index');
 Route::get('/about', 'AboutController@index')->name ('about.index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
