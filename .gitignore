@@ -4,7 +4,7 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
+
 .env.backup
 .env.production
 .phpunit.result.cache
@@ -32,14 +32,12 @@ node_modules/
 app/bower/
 .tmp/
 /build/
-/dist/
+
 
 # OS or Editor folders
 .DS_Store
 Thumbs.db
 .cache
-.project
-.settings
 .tmproj
 *.esproj
 nbproject
