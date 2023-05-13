@@ -19,5 +19,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # laravel_basic_8_5
 
 ### OOP and MVC Tutorial in PHP Basics
-* [https://code.mu/ru/php/book/oop/
-](https://code.mu/ru/php/framework/laravel/book/prime/)
+* https://code.mu/ru/php/framework/laravel/book/prime/
