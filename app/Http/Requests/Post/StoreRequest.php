@@ -24,11 +24,14 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            "title" => 'string',
+            'title' => 'string',
             'content' => 'string',
             'image' => 'string',
-            'category_id' => '',
+            'likes' => '',
+            'category' => '',
             'tags' => '',
+            'tags.*.title' => '',
+            'tags.*.id' => '',
         ];
     }
 }

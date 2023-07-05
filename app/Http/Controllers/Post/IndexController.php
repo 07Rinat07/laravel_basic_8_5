@@ -16,7 +16,7 @@ class IndexController extends BaseController
         $data = $request->validated ();
 
         $page = $data['page'] ?? 1;
-        $perPage = $data['per_page'] ?? 3;
+        $perPage = $data['per_page'] ?? 10;
 
 
         $filter = app ()->make (PostFilter::class, ['queryParams' => array_filter ($data)]);
