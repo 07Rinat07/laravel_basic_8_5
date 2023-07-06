@@ -38,22 +38,41 @@ class Service
 
     public function update($post, $data)
     {
-        $tags = $data['tags'];
-        $category = $data['category'];
-        unset($data['tags'], $data['category']);
+        try {
+            Db::beginTransaction();
+            $tags = $data['tags'];
+            $category = $data['category'];
+            unset($data['tags'], $data['category']);
 
 
-        $tagIds = $this->getTagIdsWithUpdate($tags);
-        $data['category_id'] = $this->getCategoryId($category);
+            $tagIds = $this->getTagIdsWithUpdate($tags);
+            $data['category_id'] = $this->getCategoryIdWithUpdate($category);
 
-        $post->update($data);
-        $post->tags()->sync($tagIds);
+            $post->update($data);
+            $post->tags()->sync($tagIds);
+        } catch (\Exception $exception) {
+            Db::rollBack();
+            return $exception->getMessage();
+        }
         return $post->fresh();
     }
 
     private function getCategoryId($item)
     {
         $category = !isset($item['id']) ? Category::create($item) : Category::find($item['id']);
+    }
+
+
+    private function getCategoryIdWithUpdate($item)
+    {
+        if (!isset($item['id'])) {
+            $category = Category::create($item);
+        } else {
+            $category = Category::find($item['id']);
+            $category->update($item);
+            $category = $category->fresh();
+        }
+        return $category->id;
     }
 
     private function getTagIdsWithUpdate($tags)
