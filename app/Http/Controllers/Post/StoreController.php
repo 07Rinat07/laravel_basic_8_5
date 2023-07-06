@@ -14,11 +14,8 @@ class StoreController extends BaseController
         $data = $request->validated ();
 
         $post = $this->service->store ($data);
-        if ($post instanceof Post) {
+       return $post instanceof Post ? new PostResource($post) : $post;
 
-        }
-
-        return new PostResource($post);
        // return redirect ()->route ('post.index');
     }
 }
