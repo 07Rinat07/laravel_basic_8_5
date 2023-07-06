@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 05 2023 г., 10:46
+-- Время создания: Июл 06 2023 г., 18:37
 -- Версия сервера: 5.7.39
 -- Версия PHP: 7.4.30
 
@@ -295,6 +295,13 @@ CREATE TABLE `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('ura07srr@gmail.com', '$2y$10$ZXK8GAvetSq4u7mC9mO4PO7Xr1V.XxESyxmWeSh6/PhguePLAYNY6', '2023-07-05 05:23:19');
+
 -- --------------------------------------------------------
 
 --
@@ -337,7 +344,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`, `image`, `likes`, `is_published`, `created_at`, `updated_at`, `deleted_at`, `category_id`) VALUES
-(1, 'Libero vel expedita impedit tempora eos quia sit. Omnis dolorem voluptatum consequatur aut aut doloribus. Aut et rerum temporibus vero. Distinctio dolor quia architecto reprehenderit qui eveniet.', 'Duchess, digging her sharp little chin into Alice\'s head. \'Is that the poor little Lizard, Bill, was in livery: otherwise, judging by his garden.\"\' Alice did not at all for any lesson-books!\' And so she took up the fan and gloves. \'How queer it seems,\' Alice said nothing; she had.', 'mollitia new.jpg', 140, 1, '2023-05-29 06:30:39', '2023-06-16 01:40:39', NULL, 191),
+(1, 'New post with transaction', 'nsome content', 'someimage.jpg', 140, 1, '2023-05-29 06:30:39', '2023-07-05 23:09:49', NULL, 1),
 (2, 'Et sed possimus libero veniam. Aspernatur sunt qui quo cum. Officiis consequatur dolores et eos doloribus velit quos.', 'Hatter. He came in sight of the Gryphon, sighing in his note-book, cackled out \'Silence!\' and read out from his book, \'Rule Forty-two. ALL PERSONS MORE THAN A MILE HIGH TO LEAVE THE COURT.\' Everybody looked at the end.\' \'If you knew Time as.', 'qui new.jpg', 284, 1, '2023-05-16 05:05:44', '2023-06-15 10:21:05', NULL, 83),
 (3, 'Sed molestiae eaque ut nihil maxime aut. Aut nobis rem quos reprehenderit consectetur. In minima inventore ipsum eos.', 'And welcome little fishes in With gently smiling jaws!\' \'I\'m sure those are not attending!\' said the Dormouse; \'--well in.\' This answer so confused poor Alice, who always took a great hurry; \'this paper has just been picked.', 'sit new.jpg', 223, 1, '2023-05-24 10:16:39', '2023-06-22 13:31:55', NULL, 71),
 (4, 'Alias voluptatibus nobis ducimus sint. Sint officiis quam accusantium illum ullam numquam. Aperiam cum aperiam nostrum in est est asperiores. Ut velit nisi quaerat ea.', 'There was no \'One, two, three, and away,\' but they all quarrel so dreadfully one can\'t hear oneself speak--and they don\'t seem to come down the bottle, she found she could not think of anything else. CHAPTER V. Advice from a.', 'harum new.jpg', 77, 1, '2023-05-29 23:42:11', '2023-07-03 06:08:33', NULL, 171),
@@ -437,9 +444,9 @@ INSERT INTO `posts` (`id`, `title`, `content`, `image`, `likes`, `is_published`,
 (98, 'Autem perferendis enim est omnis dolores et. Eum doloremque quia omnis asperiores optio rerum sed. Sint et sit in ut labore.', 'Alice (she was rather glad there WAS no one else seemed inclined to say it over) \'--yes, that\'s about the right thing to nurse--and she\'s such a capital one for catching mice--oh, I beg your pardon!\' she exclaimed in a very curious thing, and she could not remember the simple rules their.', 'fugit new.jpg', 99, 1, '2023-05-15 07:15:40', '2023-06-25 06:58:30', NULL, 103),
 (99, 'Temporibus beatae unde amet quia voluptatem possimus ut. Dolor accusantium reiciendis eos quibusdam excepturi qui quidem aspernatur.', 'I don\'t like them!\' When the sands are all pardoned.\' \'Come, THAT\'S a good thing!\' she said to the little door, had vanished completely. Very soon the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, and looked at her, and said, very.', 'rerum new.jpg', 218, 1, '2023-05-13 17:34:26', '2023-07-01 11:20:10', NULL, 90),
 (100, 'Maxime neque alias reiciendis quia dolorem non qui qui. Harum molestias sed est at eos error perferendis. Nam voluptatum natus magnam perferendis consequuntur dolorum.', 'Alice, in a trembling voice:-- \'I passed by his garden, and marked, with one finger; and the sounds will take care of the pack, she could remember them, all these changes are! I\'m never sure what I\'m.', 'voluptatem new.jpg', 251, 1, '2023-06-03 07:57:40', '2023-06-23 02:26:58', NULL, 53),
-(101, 'Sunt eos quo facere dolores consequatur et. At ipsam repellendus non.', 'Alice think it was,\' said the Hatter: \'let\'s all move one place on.\' He moved on as he found it very nice, (it had, in fact, a sort of a well?\' \'Take some more of it at all,\' said the Mock Turtle, \'they--you\'ve seen them, of course?\' \'Yes,\' said Alice, a little while, however, she.', 'neque new.jpg', 132, 1, '2023-05-24 01:00:05', '2023-06-15 05:25:40', NULL, 166);
+(101, 'Sunt eos quo facere dolores consequatur et. At ipsam repellendus non.', 'Alice think it was,\' said the Hatter: \'let\'s all move one place on.\' He moved on as he found it very nice, (it had, in fact, a sort of a well?\' \'Take some more of it at all,\' said the Mock Turtle, \'they--you\'ve seen them, of course?\' \'Yes,\' said Alice, a little while, however, she.', 'neque new.jpg', 132, 1, '2023-05-24 01:00:05', '2023-06-15 05:25:40', NULL, 166),
+(102, 'Adipisci cum dolor veniam molestias ut sint fuga. Excepturi deleniti est quisquam unde. Enim voluptatem id voluptas tempore.', 'RED rose-tree, and we won\'t talk about her and to wonder what Latitude or Longitude I\'ve got back to the three were all crowded together at one end to the jury, and the March Hare. \'Exactly so,\' said the Footman, and began to repeat it, but her.', 'et new.jpg', 216, 1, '2023-05-16 06:02:38', '2023-06-26 00:05:17', NULL, 8);
 INSERT INTO `posts` (`id`, `title`, `content`, `image`, `likes`, `is_published`, `created_at`, `updated_at`, `deleted_at`, `category_id`) VALUES
-(102, 'Adipisci cum dolor veniam molestias ut sint fuga. Excepturi deleniti est quisquam unde. Enim voluptatem id voluptas tempore.', 'RED rose-tree, and we won\'t talk about her and to wonder what Latitude or Longitude I\'ve got back to the three were all crowded together at one end to the jury, and the March Hare. \'Exactly so,\' said the Footman, and began to repeat it, but her.', 'et new.jpg', 216, 1, '2023-05-16 06:02:38', '2023-06-26 00:05:17', NULL, 8),
 (103, 'Magnam perferendis qui qui non. Necessitatibus fugiat sunt molestiae in minus alias.', 'Alice was beginning to think this a very humble tone, going down on their faces, so that it might belong to one of them.\' In another minute the whole pack rose up into a pig,\' Alice quietly said, just as usual. \'Come, there\'s half my plan done.', 'rerum new.jpg', 135, 1, '2023-05-15 03:14:39', '2023-06-16 12:48:34', NULL, 104),
 (104, 'Consequatur impedit eaque et et dolorem. Facilis corporis enim ut quis consequatur saepe. Id nihil excepturi iste minus. Ducimus dolorum maxime at.', 'She felt that it might happen any minute, \'and then,\' thought Alice, and, after folding his arms and frowning at the stick, running a very long silence, broken only by an occasional exclamation of \'Hjckrrh!\' from the roof. There were doors all round her once more, while the Mock Turtle.', 'a new.jpg', 220, 1, '2023-05-19 19:24:08', '2023-06-24 14:53:11', NULL, 27),
 (105, 'Soluta explicabo et tenetur. Expedita ut non at. Nam possimus ab explicabo minus. Dolorum est optio hic voluptates.', 'Shakespeare, in the lap of her little sister\'s dream. The long grass rustled at her feet, they seemed to listen, the whole cause, and condemn you to offer it,\' said the Hatter. He came in with a.', 'aliquam new.jpg', 243, 1, '2023-05-31 15:17:27', '2023-06-23 01:56:51', NULL, 176),
@@ -542,10 +549,10 @@ INSERT INTO `posts` (`id`, `title`, `content`, `image`, `likes`, `is_published`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `post_tags`
+-- Структура таблицы `post_tag`
 --
 
-CREATE TABLE `post_tags` (
+CREATE TABLE `post_tag` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -554,17 +561,14 @@ CREATE TABLE `post_tags` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `post_tags`
+-- Дамп данных таблицы `post_tag`
 --
 
-INSERT INTO `post_tags` (`id`, `created_at`, `updated_at`, `post_id`, `tag_id`) VALUES
-(1, NULL, NULL, 1, 1),
-(2, NULL, NULL, 2, 3),
-(3, NULL, NULL, 3, 1),
-(4, NULL, NULL, 4, 3),
-(5, NULL, NULL, 5, 2),
-(6, NULL, NULL, 6, 2),
-(7, NULL, NULL, 7, 3);
+INSERT INTO `post_tag` (`id`, `created_at`, `updated_at`, `post_id`, `tag_id`) VALUES
+(1, '2023-07-12 08:42:44', '2023-07-12 08:42:44', 1, 1),
+(2, NULL, NULL, 2, 1),
+(16, NULL, NULL, 1, 3),
+(17, NULL, NULL, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -584,16 +588,16 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `title`, `created_at`, `updated_at`) VALUES
-(1, 'Vel et harum et quam architecto. Ut ducimus qui et velit labore perferendis ducimus. Rerum ut ullam ut aut occaecati autem. Soluta tempora minus dicta quia ea voluptatum nisi tenetur.', '2023-05-20 13:45:15', '2023-06-20 09:44:06'),
+(1, 'some new update title', '2023-05-20 13:45:15', '2023-07-05 23:09:49'),
 (2, 'Officiis magnam voluptatem voluptas facilis necessitatibus tenetur autem minima. Maiores incidunt illo qui autem et.', '2023-05-30 15:41:06', '2023-06-29 12:40:23'),
-(3, 'Modi est occaecati vel officiis quidem cumque culpa. Qui et dolores ad et corporis laborum nihil. Quia est molestias ea quidem consequatur omnis. Vel a voluptas et incidunt nemo officiis laborum.', '2023-05-16 05:16:47', '2023-06-30 07:04:58'),
+(3, 'some new update title', '2023-05-16 05:16:47', '2023-07-05 23:10:44'),
 (4, 'Dolor vel facere architecto explicabo. Architecto et labore et. Delectus id quaerat nisi labore tempore et. Quis id quia quo mollitia illo.', '2023-05-07 17:10:20', '2023-06-20 00:45:13'),
 (5, 'Molestiae vel ratione hic aliquid et. Cumque minima doloribus quasi doloribus alias. Sunt est facere maxime et totam exercitationem et. Dolores distinctio iusto eum aut et molestiae.', '2023-05-08 03:39:56', '2023-06-29 05:20:02'),
 (6, 'Doloremque omnis non voluptas. Consequatur aut quibusdam quia aspernatur facere sint. Est voluptatem tempora ad nihil.', '2023-05-10 13:12:41', '2023-06-17 18:09:27'),
 (7, 'Aut pariatur ratione hic praesentium. Voluptatem cumque enim ut voluptas ad. Consequatur voluptas veniam quo non alias.', '2023-05-30 02:28:59', '2023-06-18 03:06:49'),
 (8, 'Vitae voluptatem temporibus aut voluptatem qui pariatur consequatur. Quia ipsum et quisquam aut voluptas ipsa eaque minus. Nihil possimus praesentium excepturi sit ducimus dolor quis.', '2023-05-11 07:51:00', '2023-06-26 19:43:02'),
 (9, 'Omnis reprehenderit doloremque odit voluptate. Ut neque id aut animi cumque alias consequuntur labore. Est qui porro debitis repellendus ullam.', '2023-05-10 09:32:43', '2023-06-21 22:49:03'),
-(10, 'Enim ex sunt corporis recusandae. Error sit reiciendis aut. Reiciendis sit temporibus dolor quod.', '2023-05-18 20:44:54', '2023-06-24 00:11:35'),
+(10, 'some new update title', '2023-05-18 20:44:54', '2023-07-05 23:09:57'),
 (11, 'Et quod qui ut omnis est et voluptas. Qui mollitia maiores aut blanditiis dignissimos. Sit impedit excepturi eius pariatur minima hic. Doloribus rerum voluptates ab id et eligendi atque eius.', '2023-05-31 14:44:28', '2023-06-30 05:11:35'),
 (12, 'Atque atque aspernatur amet nemo. Enim perferendis error consequuntur nobis. Qui accusamus fugiat ea in suscipit id perspiciatis.', '2023-06-02 17:26:13', '2023-06-29 03:21:32'),
 (13, 'Consequatur ab atque accusamus unde facilis eius. Voluptas itaque minima hic aliquam atque dolorem qui. Rerum asperiores aut assumenda.', '2023-05-11 07:30:24', '2023-07-01 01:02:38'),
@@ -783,7 +787,16 @@ INSERT INTO `tags` (`id`, `title`, `created_at`, `updated_at`) VALUES
 (197, 'Vel deserunt nam ut sed tempore molestiae tempora. Omnis nostrum at qui autem sed neque unde. Deserunt ut veniam molestias dolor est. Est quia laborum doloremque ipsum eum maiores iusto.', '2023-05-22 23:42:16', '2023-07-01 07:56:09'),
 (198, 'Nemo ea sint vitae ut dolorum aut omnis. Sequi dolorum at explicabo aut. Sapiente asperiores consequuntur possimus repellendus. Et magni delectus dolor atque iure. Voluptates ipsam voluptatem aut.', '2023-05-24 12:21:10', '2023-06-17 07:08:28'),
 (199, 'Omnis recusandae rerum quis voluptates consectetur beatae. Numquam dolores est ullam. Ad ducimus aut qui quam error.', '2023-05-23 08:31:34', '2023-07-01 18:16:51'),
-(200, 'Praesentium deserunt dignissimos consectetur. Consequatur a a quae quisquam. Et et eius exercitationem excepturi sunt.', '2023-05-28 15:01:15', '2023-06-20 13:00:44');
+(200, 'Praesentium deserunt dignissimos consectetur. Consequatur a a quae quisquam. Et et eius exercitationem excepturi sunt.', '2023-05-28 15:01:15', '2023-06-20 13:00:44'),
+(201, 'some new tag title', '2023-07-05 23:09:49', '2023-07-05 23:09:49'),
+(202, 'some new tag title', '2023-07-05 23:09:57', '2023-07-05 23:09:57'),
+(203, 'some new tag title', '2023-07-05 23:10:16', '2023-07-05 23:10:16'),
+(204, 'some new tag title', '2023-07-05 23:10:21', '2023-07-05 23:10:21'),
+(205, 'some new tag title', '2023-07-05 23:10:27', '2023-07-05 23:10:27'),
+(206, 'some new tag title', '2023-07-05 23:10:32', '2023-07-05 23:10:32'),
+(207, 'some new tag title', '2023-07-05 23:10:44', '2023-07-05 23:10:44'),
+(208, 'some new tag title', '2023-07-05 23:11:21', '2023-07-05 23:11:21'),
+(209, 'some new tag title', '2023-07-05 23:13:47', '2023-07-05 23:13:47');
 
 -- --------------------------------------------------------
 
@@ -808,16 +821,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Jayce Predovic', 'gay.harvey@example.net', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'm2gCbotuB7', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(2, 'Simeon Ernser', 'boehm.genesis@example.net', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MnBmpxyxFh', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(3, 'Terence Keeling', 'cassin.destany@example.org', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'd2ZFhOneQZ', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(4, 'Marc Pouros', 'carolyn.koelpin@example.net', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'oZKWcVuEmZ', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(5, 'Leo Gerhold', 'bturcotte@example.net', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8e2BTu7EM8', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(6, 'Natalie Bechtelar', 'goyette.arden@example.net', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'NL8RpP4u4m', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(7, 'Dr. Bernita Rempel Sr.', 'casper.myron@example.org', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ayzfPAm9RW', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(8, 'Janis Gleason', 'runte.willa@example.org', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rtvd2MTRbU', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(9, 'Bart Macejkovic', 'grant.lynn@example.com', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'R8ncQlgNLP', '2023-07-05 04:36:35', '2023-07-05 04:36:35'),
-(10, 'Rebeca Heathcote', 'hershel.crooks@example.org', 'user', '2023-07-05 04:36:35', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BSp5puIUTJ', '2023-07-05 04:36:35', '2023-07-05 04:36:35');
+(13, 'Rinat', 'ura07srr@gmail.com', 'admin', '2023-07-04 11:36:05', '$2y$10$ORAfYkCLDJzx/gIWd12h7uHoeD5ptViL1FHdVa3aanBzKVy20cLIG', 'VrlWN4xoeYXASNlQUZe3hno9JtM9gkaJqAKJWLKs3dPuUnOeaFB04XNjdmcD', '2023-07-05 05:40:39', '2023-07-05 05:40:39');
 
 --
 -- Индексы сохранённых таблиц
@@ -864,9 +868,9 @@ ALTER TABLE `posts`
   ADD KEY `post_category_idx` (`category_id`);
 
 --
--- Индексы таблицы `post_tags`
+-- Индексы таблицы `post_tag`
 --
-ALTER TABLE `post_tags`
+ALTER TABLE `post_tag`
   ADD PRIMARY KEY (`id`),
   ADD KEY `post_tag_post_idx` (`post_id`),
   ADD KEY `post_tag_tag_idx` (`tag_id`);
@@ -919,22 +923,22 @@ ALTER TABLE `posts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
 
 --
--- AUTO_INCREMENT для таблицы `post_tags`
+-- AUTO_INCREMENT для таблицы `post_tag`
 --
-ALTER TABLE `post_tags`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `post_tag`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT для таблицы `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -947,9 +951,9 @@ ALTER TABLE `posts`
   ADD CONSTRAINT `post_category_fk` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
 
 --
--- Ограничения внешнего ключа таблицы `post_tags`
+-- Ограничения внешнего ключа таблицы `post_tag`
 --
-ALTER TABLE `post_tags`
+ALTER TABLE `post_tag`
   ADD CONSTRAINT `post_tag_post_fk` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`),
   ADD CONSTRAINT `post_tag_tag_fk` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`);
 COMMIT;
