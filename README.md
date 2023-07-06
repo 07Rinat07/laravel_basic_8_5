@@ -11,3 +11,4 @@
 
 ### Tutorial in Laravel
 * https://code.mu/ru/php/framework/laravel/book/prime/
+* https://jsonplaceholder.typicode.com/
